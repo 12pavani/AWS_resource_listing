@@ -192,6 +192,19 @@ esac
 
 <hr>
 
+<hr>
+
+<h2>📸 Sample Output Screenshots</h2>
+
+<h3>EC2 Instances Output</h3>
+<img width="2272" height="820" alt="image" src="https://github.com/user-attachments/assets/206168aa-3786-478d-81b9-13db0c952c8b" />
+
+
+<p>
+This screenshot shows the output of listing EC2 instances using the script.
+</p>
+
+
 <h2>❗ Common Issues Faced & Fixes</h2>
 
 <h3>Issue 1: Invalid service even with correct input</h3>
