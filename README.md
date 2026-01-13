@@ -97,46 +97,20 @@ aws sts get-caller-identity
 
 <hr>
 
-<h2>🔑 How to Obtain AWS Access Keys</h2>
+<h3>🔑 How to Obtain AWS Access Keys (Simpler Way)</h3>
 
-<p>To run this script, you need an <strong>AWS Access Key ID</strong> and <strong>AWS Secret Access Key</strong>. These are generated from your AWS account using IAM.</p>
+<p>To run this script, you need an <strong>AWS Access Key ID</strong> and <strong>AWS Secret Access Key</strong>. These are generated from your AWS account.</p>
 
-<h3>Step 1: Login to AWS Console</h3>
-<p>Go to <a href="https://aws.amazon.com/console/">AWS Management Console</a> and log in with your credentials.</p>
+<h4>Steps:</h4>
+<ol>
+    <li>Log in to <a href="https://aws.amazon.com/console/">AWS Management Console</a>.</li>
+    <li>Click your username on the top-right corner → Select <strong>Security credentials</strong>.</li>
+    <li>Scroll to <strong>Access keys (access key ID and secret access key)</strong>.</li>
+    <li>Create a new key or download an existing one (.csv file).</li>
+    <li>Run <code>aws configure</code> in terminal and provide the Access Key ID, Secret Access Key, default region, and output format.</li>
+</ol>
 
-<h3>Step 2: Navigate to IAM (Identity & Access Management)</h3>
-<p>In the search bar, type <strong>IAM</strong> and open the IAM service.</p>
-
-<h3>Step 3: Create a new IAM User (if needed)</h3>
-<ul>
-    <li>Click <strong>Users → Add user</strong></li>
-    <li>Enter a username (example: <code>devops-fresher</code>)</li>
-    <li>Select <strong>Programmatic access</strong> as access type</li>
-    <li>Click <strong>Next: Permissions</strong></li>
-</ul>
-
-<h3>Step 4: Assign Permissions</h3>
-<ul>
-    <li>You can attach existing policies like <strong>AdministratorAccess</strong> (for learning purposes) or specific policies for limited access.</li>
-    <li>Click <strong>Next: Tags → Next: Review → Create User</strong></li>
-</ul>
-
-<h3>Step 5: Download Access Keys</h3>
-<ul>
-    <li>After creating the user, you will see <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>.</li>
-    <li>Click <strong>Download .csv</strong> to save them securely, because the secret key is shown only once.</li>
-</ul>
-
-<h3>Step 6: Use Keys in AWS CLI</h3>
-<p>Run <code>aws configure</code> in your terminal and provide:</p>
-<ul>
-    <li>AWS Access Key ID → from the CSV file</li>
-    <li>AWS Secret Access Key → from the CSV file</li>
-    <li>Default region (example: <code>us-east-2</code>)</li>
-    <li>Output format (optional, e.g., <code>json</code> or leave blank)</li>
-</ul>
-
-<p><strong>Important:</strong> Never share or commit these keys in public repositories. Keep them secure.</p>
+<p><strong>Important:</strong> Keep these keys safe! Never share or commit them publicly.</p>
 
 <hr>
 
