@@ -58,10 +58,17 @@ else
 fi
 
 # List the resources based on the service
+# AZ = Availability Zone
+# ID = Instance Id
+# State = State Name
+# Type = Instance Type
 case $2 in
     ec2)
         echo "Listing EC2 Instances in $1"
-        aws ec2 describe-instances --region $1
+        aws ec2 describe-instances --region $1 \
+  --query 'Reservations[].Instances[].{ID:InstanceId,Type:InstanceType,State:State.Name,AZ:Placement.AvailabilityZone}' \
+  --output table
+
         ;;
     rds)
         echo "Listing RDS Instances in $1"
