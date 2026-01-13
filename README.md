@@ -239,7 +239,7 @@ case $2 in
 
 <h3>Issue 3: Large EC2 JSON Output</h3>
 <p><strong>Reason:</strong> <code>describe-instances</code> returns full details.</p>
-<p><strong>Learning:</strong> Use <code>--query</code> and <code>--output table</code> later.</p>
+<p><strong>Fix:</strong> Use <code>--query</code> and <code>--output table</code>.</p>
 
 <hr>
 
@@ -257,7 +257,6 @@ case $2 in
 <h2>🔮 Future Enhancements</h2>
 <ul>
     <li>Add ELB support</li>
-    <li>Improve output formatting</li>
     <li>Add logging</li>
     <li>Support multiple services</li>
 </ul>
