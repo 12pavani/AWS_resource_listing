@@ -97,6 +97,41 @@ aws sts get-caller-identity
 
 <hr>
 
+<hr>
+
+<h2>🔐 AWS CLI Configuration Details</h2>
+
+<p>When running <code>aws configure</code>, AWS CLI asks for the following values:</p>
+
+<h3>AWS Access Key ID</h3>
+<p>
+A public identifier generated from AWS IAM used to authenticate AWS CLI requests.
+It is created in the IAM console under <strong>Security Credentials</strong>.
+</p>
+
+<h3>AWS Secret Access Key</h3>
+<p>
+A private key generated along with the Access Key. It is used to securely sign AWS API requests.
+This key is shown only once and must be kept secret.
+</p>
+
+<h3>Default Region Name</h3>
+<p>
+Specifies the AWS region where resources exist, such as <code>us-east-2</code> or <code>ap-south-1</code>.
+AWS services are region-specific.
+</p>
+
+<h3>Default Output Format (Optional)</h3>
+<p>
+Controls how AWS CLI displays output. Common values are <code>json</code>, <code>table</code>, and <code>text</code>.
+If left empty, AWS CLI uses JSON by default.
+</p>
+
+<p>
+AWS CLI stores these values securely in <code>~/.aws/credentials</code> and <code>~/.aws/config</code>.
+</p>
+
+
 <h3>Step 3: Create Shell Script</h3>
 <pre>
 touch aws_resource_list.sh
