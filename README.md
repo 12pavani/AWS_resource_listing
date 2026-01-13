@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>AWS Resource Listing README</title>
 </head>
 <body>
 
@@ -97,40 +98,48 @@ aws sts get-caller-identity
 
 <hr>
 
+<h2>🔑 How to Obtain AWS Access Keys</h2>
+
+<p>To run this script, you need an <strong>AWS Access Key ID</strong> and <strong>AWS Secret Access Key</strong>. These are generated from your AWS account using IAM.</p>
+
+<h3>Step 1: Login to AWS Console</h3>
+<p>Go to <a href="https://aws.amazon.com/console/">AWS Management Console</a> and log in with your credentials.</p>
+
+<h3>Step 2: Navigate to IAM (Identity & Access Management)</h3>
+<p>In the search bar, type <strong>IAM</strong> and open the IAM service.</p>
+
+<h3>Step 3: Create a new IAM User (if needed)</h3>
+<ul>
+    <li>Click <strong>Users → Add user</strong></li>
+    <li>Enter a username (example: <code>devops-fresher</code>)</li>
+    <li>Select <strong>Programmatic access</strong> as access type</li>
+    <li>Click <strong>Next: Permissions</strong></li>
+</ul>
+
+<h3>Step 4: Assign Permissions</h3>
+<ul>
+    <li>You can attach existing policies like <strong>AdministratorAccess</strong> (for learning purposes) or specific policies for limited access.</li>
+    <li>Click <strong>Next: Tags → Next: Review → Create User</strong></li>
+</ul>
+
+<h3>Step 5: Download Access Keys</h3>
+<ul>
+    <li>After creating the user, you will see <strong>Access Key ID</strong> and <strong>Secret Access Key</strong>.</li>
+    <li>Click <strong>Download .csv</strong> to save them securely, because the secret key is shown only once.</li>
+</ul>
+
+<h3>Step 6: Use Keys in AWS CLI</h3>
+<p>Run <code>aws configure</code> in your terminal and provide:</p>
+<ul>
+    <li>AWS Access Key ID → from the CSV file</li>
+    <li>AWS Secret Access Key → from the CSV file</li>
+    <li>Default region (example: <code>us-east-2</code>)</li>
+    <li>Output format (optional, e.g., <code>json</code> or leave blank)</li>
+</ul>
+
+<p><strong>Important:</strong> Never share or commit these keys in public repositories. Keep them secure.</p>
+
 <hr>
-
-<h2>🔐 AWS CLI Configuration Details</h2>
-
-<p>When running <code>aws configure</code>, AWS CLI asks for the following values:</p>
-
-<h3>AWS Access Key ID</h3>
-<p>
-A public identifier generated from AWS IAM used to authenticate AWS CLI requests.
-It is created in the IAM console under <strong>Security Credentials</strong>.
-</p>
-
-<h3>AWS Secret Access Key</h3>
-<p>
-A private key generated along with the Access Key. It is used to securely sign AWS API requests.
-This key is shown only once and must be kept secret.
-</p>
-
-<h3>Default Region Name</h3>
-<p>
-Specifies the AWS region where resources exist, such as <code>us-east-2</code> or <code>ap-south-1</code>.
-AWS services are region-specific.
-</p>
-
-<h3>Default Output Format (Optional)</h3>
-<p>
-Controls how AWS CLI displays output. Common values are <code>json</code>, <code>table</code>, and <code>text</code>.
-If left empty, AWS CLI uses JSON by default.
-</p>
-
-<p>
-AWS CLI stores these values securely in <code>~/.aws/credentials</code> and <code>~/.aws/config</code>.
-</p>
-
 
 <h3>Step 3: Create Shell Script</h3>
 <pre>
@@ -227,18 +236,16 @@ esac
 
 <hr>
 
-<hr>
-
 <h2>📸 Sample Output Screenshots</h2>
 
 <h3>EC2 Instances Output</h3>
 <img width="2272" height="820" alt="image" src="https://github.com/user-attachments/assets/206168aa-3786-478d-81b9-13db0c952c8b" />
 
-
 <p>
 This screenshot shows the output of listing EC2 instances using the script.
 </p>
 
+<hr>
 
 <h2>❗ Common Issues Faced & Fixes</h2>
 
