@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AWS Resource Listing Shell Script</title>
 </head>
 <body>
 
